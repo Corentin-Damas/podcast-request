@@ -1,0 +1,283 @@
+:root {
+  --clr-mGreen: #54e6af;
+  --clr-midGrey: #54668a;
+  --clr-liGrey: #c2cbe5;
+  --clr-dGrey: #2c344b;
+  --clr-dark: #121725;
+  --clr-white: #ffffff;
+  --ff-chivo: "Chivo", "sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === TYPO === */
+
+h1 {
+  font-family: var(--ff-chivo);
+  color: var(--clr-white);
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--ff-chivo);
+  color: var(--clr-white);
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+/* === PART === */
+
+body {
+  background-color: #121725;
+  background-image: url(./assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-width: 375px;
+  min-height: 554px;
+  text-align: center;
+  padding-inline: 5%;
+  padding-top: 10rem;
+}
+
+main > * {
+  justify-content: space-between;
+}
+
+.cover {
+  background-color: var(--clr-dark);
+  opacity: 90%;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 178vw;
+  min-height: 554px;
+}
+
+.btn {
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* === specifics === */
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  top: 3.5rem;
+  left: 40%;
+}
+
+span {
+  color: var(--clr-mGreen);
+}
+
+.sponsors {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+}
+
+.sponsors > * {
+  height: 0.8rem;
+}
+
+.formulaire {
+  height: 5rem;
+  width: 100%;
+}
+
+.emailInput {
+  background-color: var(--clr-dGrey);
+  border-radius: 20px;
+  font-family: var(--ff-chivo);
+  color: var(--clr-liGrey);
+  font-size: 1rem;
+  border-style: none;
+  width: 100%;
+  height: 2.876rem;
+  padding-left: 5%;
+}
+
+.emailInput:focus {
+  outline: none;
+}
+
+.btnReq {
+  background-color: var(--clr-mGreen);
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  height: 2.876rem;
+  align-items: center;
+  width: 100%;
+}
+
+.btnReq > p {
+  color: var(--clr-dark);
+  text-align: center;
+  line-height: 0rem;
+  font-family: var(--ff-chivo);
+  font-weight: bolder;
+  padding-top: 22px;
+}
+
+.patternbot {
+  display: none;
+}
+
+/* === script=== */
+
+.nope {
+  color: red;
+}
+
+/* === Others === */
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  body {
+    background-image: url(./assets/tablet/image-host.jpg);
+    height: 65vh;
+  }
+
+  main {
+    width: 75vw;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 0rem;
+    background-color: var(--clr-dark);
+    top: 30vh;
+  }
+
+  body {
+    background-size: contain;
+    background-position: right;
+  }
+
+  .logo {
+    top: 3.5rem;
+    left: 2.5rem;
+  }
+  .cover {
+    display: none;
+  }
+
+  .sponsors {
+    order: 2;
+    padding-bottom: 50px;
+  }
+
+  .sponsors > * {
+    height: 1.6rem;
+  }
+  .formulaire {
+    height: 5rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .sponsors {
+    justify-content: space-between;
+  }
+
+  .emailInput {
+    position: relative;
+    border-style: none;
+    height: 3.24rem;
+    transform: translateY(-0.2rem);
+  }
+
+  .btnReq {
+    right: 40px;
+    position: absolute;
+    cursor: pointer;
+    align-items: baseline;
+    width: 30%;
+  }
+
+  .patternbot {
+    display: block;
+    position: absolute;
+    top: 140%;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  body {
+    background-image: url(./assets/desktop/image-host.jpg);
+    background-position: 100% 5rem;
+    height: 65vh;
+    margin-top: 3.5;
+  }
+
+  main {
+    width: 50vw;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 0rem;
+    background-color: var(--clr-dark);
+    top: 30vh;
+  }
+
+  .formulaire {
+    height: 5rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 42.5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .patternbot {
+    top: 103%;
+    left: 80%;
+  }
+}
